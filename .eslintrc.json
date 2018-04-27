@@ -3,7 +3,8 @@
     "browser": true,
     "es6": true
   },
-  "extends": ["plugin:prettier/recommended"],
+  "extends": ["google", "prettier"],
+  "plugins": ["prettier"],
   "rules": {
     "prettier/prettier": "error"
   }
