@@ -1,14 +1,16 @@
 {
   "recommendations": [
     "dbaeumer.vscode-eslint",
-    "abusaidm.html-snippets",
-    "mkaufman.htmlhint",
     "oderwat.indent-rainbow",
-    "Equinusocio.vsc-material-theme",
+    "wesbos.theme-cobalt2",
     "techer.open-in-browser",
     "2gua.rainbow-brackets",
     "stkb.rewrap",
     "shinnn.stylelint",
-    "esbenp.prettier-vscode"
+    "esbenp.prettier-vscode",
+    "naumovs.color-highlight",
+    "codezombiech.gitignore",
+    "spywhere.guides",
+    "mrmlnc.vscode-stylefmt"
   ]
 }
