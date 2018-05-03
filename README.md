@@ -27,7 +27,9 @@ When you open this project in VS Code, it will prompt you to extend a bunch of e
 
 Those are just my recommendations. Also, in that same folder, _settings.json_ should automatically configure your VS Code to follow my recommendations. You can always change this later.
 
-Also, you should install the fonts in the font folder. 
+Also, you should *install the fonts in the _fonts_ folder.*
+
+Oh yeah, the default font-size is set to _18._ If you want to change that, just go to your _VS Code Settings_ and change this line: `"editor.fontSize": 18,`. Recall that in VS Code you can do _cmd/ctrl + shift + p_ to search for whatever menus and stuff you need. So, for example, just type _settings_ and you will probably find what you need.
 
 This is great for beginners, who just want to get up and running. You will want something more robust and thorough for production though, eventually.
 
