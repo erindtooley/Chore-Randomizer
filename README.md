@@ -11,14 +11,14 @@ Other than that, navigate to this folder in your commmand prompt. Type ```npm in
 
 Note that this setup assumes you want to use [**Visual Studio Code**](https://code.visualstudio.com/) - you probably should as its pretty much the best code-editor on _this_ planet, at least.
 
-When set up properly, among other features, you will have linting within VS Code that will cover your HTML, CSS and JS. It is configured to follow industry-standard best practices (not just my opinion).
+When set up properly, among other features, you will have linting within VS Code that will cover your CSS and JS. It is configured to follow industry-standard best practices (not just my opinion).
 
 It features [ESLint](https://eslint.org/), [Stylelint](https://github.com/stylelint/stylelint), and [Prettier](https://prettier.io/), among other things.
 
-Speaking of [Prettier](https://prettier.io/), there is at least 1 setting inside of _.eslintrc_ that you may want to change:
+Speaking of [Prettier](https://prettier.io/), there is at least 1 setting inside of _.eslintrc.json_ that you may want to change:
 
 ```javascript
-"printWidth": 100,
+"printWidth": 80,
 ```
 
 This determines the 'max width' of each line of text. Depending on your screen size, you may want to decrease this to ```80``` (for smaller screen) or ```120``` for larger screens.
@@ -27,7 +27,7 @@ When you open this project in VS Code, it will prompt you to extend a bunch of e
 
 Those are just my recommendations. Also, in that same folder, _settings.json_ should automatically configure your VS Code to follow my recommendations. You can always change this later.
 
-Also, you should install the fonts in the font folder. I have included for Windoze, but you can get whatever ones you need [here.](https://github.com/tonsky/FiraCode)
+Also, you should install the fonts in the font folder. 
 
 This is great for beginners, who just want to get up and running. You will want something more robust and thorough for production though, eventually.
 
