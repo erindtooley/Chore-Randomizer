@@ -5,11 +5,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>CIS 177 Boilerplate</title>
+  <title>Chore Randomizer</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+  <form>
+    <h2>Select Name</h2>
+    <br>
+    <select id="no">
+      <option>Eva</option>
+      <option>Daniel</option>
+    </select>
+    <input type="button" onclick="nameFunction()" value="Name">
+    <br>
+    <br>
+    <input type="text" id="result" size="20">
+  </form>
+  <br>
+  <br>
+  <button id="getChore" value="choreArray" onclick="loadChore();">Get Chore</button>
+  <p id="choreHere"></p>
+  <p id="choreList"></p>
+
   <script src="scripts.js"></script>
 </body>
 
