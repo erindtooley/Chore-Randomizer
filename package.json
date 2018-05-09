@@ -1,7 +1,7 @@
 {
-  "name": "cis177-starter",
+  "name": "chore-randomizer",
   "version": "1.0.0",
-  "description": "Boilerplate for working on class projects in JS.",
+  "description": "A simple JS program that assigns random chores to names in an array.",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,7 +11,11 @@
     "eslint",
     "prettier"
   ],
-  "author": "Manav Misra",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erindtooley/Chore-Randomizer"
+  },
+  "author": "Erin D. Tooley",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^4.19.1",
