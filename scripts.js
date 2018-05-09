@@ -71,6 +71,24 @@ function choreArrayController() {
   choreArray.splice(randNum, 1);
   return chore;
 }
+
+/** Handle click from button */
+function clickHandler() {
+  // Grab a chore from the array
+  const randChore = choreArrayController();
+
+  // Clear the chore output.
+  output.textContent = "";
+
+  // Update the chore output (assuming we got back an actual chore)
+  output.textContent = `${kids.value}, your chore is to: ${randChore}.`;
+
+  console.log(choreArray);
+}
+
+// Add Event Listener to button
+document.querySelector("#btn").addEventListener("click", clickHandler);
+
 //  Print the chore chosen and Array in a <p> tag.
 // document.getElementById("choreHere").innerHTML = result1;
 // document.getElementById("choreList").innerHTML = choreArray;
