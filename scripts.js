@@ -43,6 +43,16 @@ const choreArray = [
 //   };
 //   const result1 = choreArray.randsplice();
 
+/** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+ * @param {Number} min - the lowest possible integer we want.
+ * @param {Number} max - the highest possible integer we want.
+ * @return {Number} a random number between min and max, inclusive
+ */
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min; // The maximum is inclusive and the minimum is inclusive
+}
 //  Print the chore chosen and Array in a <p> tag.
 // document.getElementById("choreHere").innerHTML = result1;
 // document.getElementById("choreList").innerHTML = choreArray;
