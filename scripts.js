@@ -53,6 +53,19 @@ function getRandomIntInclusive(min, max) {
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min; // The maximum is inclusive and the minimum is inclusive
 }
+
+/** Manages data within choreArray.
+ * @return {String} a random chore from the ChoreArray
+ */
+function choreArrayController() {
+  // TODO{erin.tooley}: Add some type of check and return a message that says 'no more chores!' if array is empty.
+
+  // Generate a random number
+  const randNum = getRandomIntInclusive(0, choreArray.length);
+  const chore = choreArray[randNum];
+  choreArray.splice(randNum, 1);
+  return chore;
+}
 //  Print the chore chosen and Array in a <p> tag.
 // document.getElementById("choreHere").innerHTML = result1;
 // document.getElementById("choreList").innerHTML = choreArray;
