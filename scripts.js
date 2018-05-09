@@ -1,4 +1,4 @@
-/** @function
+/**
  * Steps in my program that need completed-
  * 1. Have the text box empty when a new name is selected from dropdown.
  * 2. -done-
@@ -14,36 +14,35 @@
 
 //  Set up the dropdown box with "Name" button.
 //  Then print "Name" onclick.
-function nameFunction() {
-  let no = document.getElementById("no");
-  let option = no.options[no.selectedIndex].text;
-  let txt = document.getElementById("result").value;
-  txt = txt + option;
-  document.getElementById("result").value = txt;
-}
+// function nameFunction() {
+//   let no = document.getElementById("no");
+//   let option = no.options[no.selectedIndex].text;
+//   let txt = document.getElementById("result").value;
+//   txt = txt + option;
+//   document.getElementById("result").value = txt;
+// }
 //  Declare Array.
 const choreArray = [
-  "0. Unload Dishwasher",
-  "1. Load Dishwasher",
-  "2. Swiffer Kitchen Floor",
-  "3. Vacuum Living Room",
-  "4. Organize Bench",
-  "5. Pick Up Bedroom",
-  "6. Dust and Pick up Living Room",
-  "7. Fold Clothes",
-  "8. Wash a Load"
+  "Unload Dishwasher",
+  "Load Dishwasher",
+  "Swiffer Kitchen Floor",
+  "Vacuum Living Room",
+  "Organize Bench",
+  "Pick Up Bedroom",
+  "Dust and Pick up Living Room",
+  "Fold Clothes",
+  "Wash a Load"
 ];
 
-//  Set up function to randomly pick chore and remove.
-const loadChore = function() {
-  const ri = choreArray[Math.floor(Math.random() * this.length)];
-  Array.prototype.randsplice = function() {
-    const rs = this.splice(ri, 1);
-    return rs;
-  };
-  const result1 = choreArray.randsplice();
+// //  Set up function to randomly pick chore and remove.
+// const loadChore = function() {
+//   const ri = choreArray[Math.floor(Math.random() * this.length)];
+//   Array.prototype.randsplice = function() {
+//     const rs = this.splice(ri, 1);
+//     return rs;
+//   };
+//   const result1 = choreArray.randsplice();
 
-  //  Print the chore chosen and Array in a <p> tag.
-  document.getElementById("choreHere").innerHTML = result1;
-  document.getElementById("choreList").innerHTML = choreArray;
-};
+//  Print the chore chosen and Array in a <p> tag.
+// document.getElementById("choreHere").innerHTML = result1;
+// document.getElementById("choreList").innerHTML = choreArray;
