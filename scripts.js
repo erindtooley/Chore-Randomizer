@@ -21,6 +21,11 @@
 //   txt = txt + option;
 //   document.getElementById("result").value = txt;
 // }
+
+// Grab select element
+const kids = document.querySelector("#kids");
+const output = document.querySelector("#chore-output");
+
 //  Declare Array.
 const choreArray = [
   "Unload Dishwasher",
