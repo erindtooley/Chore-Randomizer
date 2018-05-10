@@ -10,18 +10,27 @@
 </head>
 
 <body>
+  <h2>Daily Chore Randomizer</h2>
+  <p>Please select your name and check if dishwasher is already unloaded. The chore
+    will be selected for you at random for the day. Both kids will not have the same
+    chore each day.</p>
+  <br>
   <form>
-    <h2>Select Name</h2>
-    <br>
+    <h3>Select Name</h3>
     <select id="kids">
       <option>Eva</option>
       <option>Daniel</option>
     </select>
+    <br>
+    <br> Check box if dishwasher is unloaded:
+    <input type="checkbox" id="myCheck" onclick="unload()">
+    <br>
+    <br>
     <input type="button" value="Get Chore" id="btn">
-   
+
     <!-- <input type="text" id="result" size="20"> -->
   </form>
-  
+
   <!-- <button id="getChore" value="choreArray" onclick="loadChore();">Get Chore</button> -->
   <!-- <p id="choreHere"></p>
   <p id="choreList"></p> -->
