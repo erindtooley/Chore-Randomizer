@@ -1,6 +1,7 @@
 // Grab select element
 const kids = document.querySelector("#kids");
 const output = document.querySelector("#chore-output");
+const dishwasherToggle = document.querySelector("#dishwasher-toggle");
 
 //  Declare Array.
 const choreArray = [
@@ -41,18 +42,6 @@ function choreArrayController() {
   return chore;
 }
 
-/** Checkbox to add "Unload Dishwasher"
- * @param {bool} - true
- */
-function unload() {
-  let checkBox = document.getElementById("myCheck");
-  let text = document.getElementById("text");
-  if (checkBox.checked == true) {
-    choreArray.push("Unload Dishwasher");
-    console.log(choreArray);
-  }
-}
-
 /** Handle click from button */
 function clickHandler() {
   // Grab a chore from the array
@@ -67,5 +56,36 @@ function clickHandler() {
   console.log(choreArray);
 }
 
+/** Handle toggling of CheckBox
+ * @param {Object} e - allows us to grab properties of the checkbox that will trigger this
+ */
+function checkClickHandler(e) {
+  // Developer's Note: Capturing the 'event object' from the 'click' allows us to glean much information https://developer.mozilla.org/en-US/docs/Web/Events/click
+  /*
+    Developer's Note: We are using new Object.is for comparisons: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is#Examples
+  */
+  // Developer's Note: Checkboxes have values of 'on' or 'off.'
+
+  console.log(e.target.value);
+  /*
+    If the 'dishwasher loaded' box is checked AND 'load dishwasher' is still there in the list on the first position, we need to update this to say 'Unload Dishwasher'.
+  */
+  if (
+    Object.is(e.target.value, "on") &&
+    Object.is(choreArray[0], "Load Dishwasher")
+  ) {
+    choreArray[0] = "Unload Dishwasher";
+  } /*
+  Otherwise, checkbox must not be checked, which means dishwasher is not loaded, which means we just need to change 'Unload Dishwasher' to 'Load Dishwasher.""
+*/ else if (
+    Object.is(choreArray[0], "Unload Dishwasher")
+  ) {
+    choreArray[0] = "Load Dishwasher";
+  }
+}
+
 // Add Event Listener to button
 document.querySelector("#btn").addEventListener("click", clickHandler);
+
+// Add Event Listener to checkBox
+dishwasherToggle.addEventListener("click", checkClickHandler);
