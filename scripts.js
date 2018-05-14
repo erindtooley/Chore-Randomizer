@@ -2,6 +2,8 @@
 const kids = document.querySelector("#kids");
 const output = document.querySelector("#chore-output");
 const dishwasherToggle = document.querySelector("#dishwasher-toggle");
+const counter = document.querySelector("#counter");
+const choreDone = document.querySelector("#choreDone");
 
 //  Declare Array.
 const choreArray = [
@@ -32,7 +34,7 @@ function getRandomIntInclusive(min, max) {
 function choreArrayController() {
   // TODO{erin.tooley}: Add some type of check and return a message that says 'no more chores!' if array is empty.
   if (choreArray.length >= 0) {
-    output.textContent = "All Chores Have Been Completed!";
+    choreDone.textContent = "All Chores Have Been Completed!";
   }
 
   // Generate a random number
@@ -52,10 +54,21 @@ function clickHandler() {
 
   // Update the chore output (assuming we got back an actual chore)
   output.textContent = `${kids.value}, your chore is to: ${randChore}.`;
-
   console.log(choreArray);
 }
 
+const x = 0;
+/** Adds counter to clickHandler.
+ * @param {Number} - a counter for chores completed
+ * @return {Number} - return number counter
+ */
+function updateScore() {
+  x += 1;
+  document.getElementById("counter").value = x;
+  return x;
+  counter.textContent = "";
+  counter.textContent = `There are ` + x + ` chores done.`;
+}
 /** Handle toggling of CheckBox
  * @param {Object} e - allows us to grab properties of the checkbox that will trigger this
  */
@@ -85,7 +98,9 @@ function checkClickHandler(e) {
 }
 
 // Add Event Listener to button
-document.querySelector("#btn").addEventListener("click", clickHandler);
+document
+  .querySelector("#btn")
+  .addEventListener("click", clickHandler, updateScore);
 
 // Add Event Listener to checkBox
 dishwasherToggle.addEventListener("click", checkClickHandler);

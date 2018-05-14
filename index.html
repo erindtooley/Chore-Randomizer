@@ -15,28 +15,40 @@
     will be selected for you at random for the day. Both kids will not have the same
     chore each day.</p>
   <br>
+  <img id="image" src="images/chores.jpg">
+  <br>
   <form>
     <h3>Select Name</h3>
-    <select id="kids">
-      <option>Eva</option>
-      <option>Daniel</option>
+    <select id="kids" class="list">
+      <option>
+        <i>Name</i>
+      </option>
+      <option value="Eva">
+        Eva</option>
+      <option value="Daniel">
+        Daniel</option>
     </select>
-    <br>
-    <br> Check box if dishwasher is Loaded:
-    <input type="checkbox" id="dishwasher-toggle">
-    <br>
-    <br>
-    <input type="button" value="Get Chore" id="btn">
+    <div class="Eva-img">
+      </p>
+      <div class="Daniel-img">
+        </p>
+        <br>
+        <br> Check box if dishwasher needs unloading:
+        <input type="checkbox" id="dishwasher-toggle">
+        <br>
+        <br>
+        <input type="button" value="Get Chore" id="btn">
 
-    <!-- <input type="text" id="result" size="20"> -->
+        <!-- <input type="text " id="result " size="20 "> -->
   </form>
 
-  <!-- <button id="getChore" value="choreArray" onclick="loadChore();">Get Chore</button> -->
-  <!-- <p id="choreHere"></p>
-  <p id="choreList"></p> -->
+  <!-- <button id="getChore " value="choreArray " onclick="loadChore(); ">Get Chore</button> -->
+  <!-- <p id="choreHere "></p>
+  <p id="choreList "></p> -->
   <p id="chore-output"></p>
-
-  <script src="scripts.js"></script>
+  <p id="counter"></p>
+  </p>
+  <script src=" scripts.js "></script>
 </body>
 
 </html>
